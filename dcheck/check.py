@@ -405,9 +405,16 @@ def main():
     if outFile is '':
         outFile = 'available.txt'
 
+    print(tldArg)
     # Check only one domain
     if domain is not '':
-        checkSingleDomain(domain, outFile, apiKey, apiSecret)
+        print(tldArg)
+        if tldArg is not '':
+            for tld in tldArg.split():
+                checkSingleDomain(domain + '.' + tld, outFile, apiKey, apiSecret)
+                time.sleep(delay)
+        else:
+            checkSingleDomain(domain, outFile, apiKey, apiSecret)
         exit(0)
 
     #Check if one tld specified, if not get tlds from file
