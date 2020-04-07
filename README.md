@@ -1,5 +1,5 @@
 # dcheck
-> Mass Domain Availability Check Script
+Mass Domain Availability Check Script
 
 ## Description
 
@@ -119,4 +119,14 @@ decheck [options...]
      debug - prints debug information
 -h, --help Will display this help page
 ```
+
+## Authors
+* **Maximilia Schiller** - *Initial work* - [BetaHuhn](https://github.com/BetaHuhn)
+
+If you have any questions, noticed a bug or have a feature request, feel free to create an Issue or send me an [email](mailto:mail@betahuhn.de)
+
+## License
+This project is licensed under the MIT License - see the LICENSE.md file for details.
+
+MIT © Maximilian Schiller
 
