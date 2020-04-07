@@ -77,8 +77,8 @@ def checkSingleDomain(domain, outFile, apiKey, apiSecret):
             if mode == 'debug': print(colored("Error: " + str(res), 'red'))
     else:
         if res["available"] is True:
-            price = (res["price"] * 0.9251) / 1000000 #res['price'] / 1000000
-            currency = "Euro"
+            price = res["price"] / 1000000
+            currency = "$"
             print(colored(str(full + " is available for: " + str(round(price, 2)) + " " + currency), 'green'))
         else:
             print(colored(str(full + " is not available"), 'red'))
@@ -98,8 +98,8 @@ def parseOneDomain(domain, tld, outFile, apiKey, apiSecret):
             if mode == 'debug': print(colored("Error: " + str(res), 'red'))
     else:
         if res["available"] is True:
-            price = (res["price"] * 0.9251) / 1000000 #res['price'] / 1000000
-            currency = "Euro"
+            price = res["price"] / 1000000
+            currency = "$"
             if mode != "none": print(colored(str(full + " is available for: " + str(round(price, 2)) + " " + currency), 'green'))
             f = open(outFile, 'a')
             result = str(full + " - " + str(round(price, 2)) + " " + currency + "\n")
@@ -131,8 +131,8 @@ def parseMulipleDomains(full, outFile, apiKey, apiSecret):
                 else:
                     if mode == 'debug': print(colored("Error: " + str(domain), 'red'))
             elif domain["available"] is True:
-                price = (domain["price"] * 0.9251) / 1000000 #res['price'] / 1000000
-                currency = "Euro"
+                price = domain["price"] / 1000000
+                currency = "$"
                 if mode != "none": print(colored(str(domain['domain'] + " is available for: " + str(round(price, 2)) + " " + currency), 'green'))
                 f = open(outFile, 'a')
                 result = str(domain['domain'] + " - " + str(round(price, 2)) + " " + currency + "\n")
@@ -154,8 +154,8 @@ def parseMulipleDomains(full, outFile, apiKey, apiSecret):
                 else:
                     if mode == 'debug': print(colored("Error: " + str(domain), 'red'))
             elif domain["available"] is True:
-                price = (domain["price"] * 0.9251) / 1000000 #res['price'] / 1000000
-                currency = "Euro"
+                price = domain["price"] / 1000000
+                currency = "$"
                 if mode != "none": print(colored(str(domain['domain'] + " is available for: " + str(round(price, 2)) + " " + currency), 'green'))
                 f = open(outFile, 'a')
                 result = str(domain['domain'] + " - " + str(round(price, 2)) + " " + currency + "\n")
