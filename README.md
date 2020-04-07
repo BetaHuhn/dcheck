@@ -1,5 +1,5 @@
 # dcheck
-> Mass Domain Availability Checker
+> Mass Domain Availability Check Script
 
 ## Description
 
