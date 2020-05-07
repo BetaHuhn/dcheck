@@ -86,7 +86,7 @@ cd dcheck
 ```shell
 python3 setup.py install
 ```
-- dheck command is now available
+- dcheck command is now available
 - get your GoDaddy API Key and Secret [here](https://developer.godaddy.com/keys) and either set them as environment variables:
 ```shell
 export APIKEY="YOUR KEY"
@@ -98,7 +98,7 @@ or specify them each time you run the command with
 ```
 
 ## Usage 
-decheck [options...]
+dcheck [options...]
 ```
 -t, --tld <tld> Specify TLD without dot, if multiple: -t "com org" [default: com]
 -l, --tldlist <file> List of TLDs in a file, one on each line
